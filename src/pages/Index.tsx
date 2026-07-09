@@ -7,10 +7,12 @@ import OpenSource from "@/components/OpenSource";
 import Domains from "@/components/Domains";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
+import InteractiveBackground from "@/components/InteractiveBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground scroll-smooth">
+    <div className="min-h-screen bg-background text-foreground scroll-smooth relative">
+      <InteractiveBackground />
       <Navigation />
       <Hero />
       <Skills />
