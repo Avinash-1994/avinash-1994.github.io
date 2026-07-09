@@ -11,7 +11,7 @@ import InteractiveBackground from "@/components/InteractiveBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground scroll-smooth relative">
+    <div className="min-h-screen bg-transparent text-foreground scroll-smooth relative">
       <InteractiveBackground />
       <Navigation />
       <Hero />

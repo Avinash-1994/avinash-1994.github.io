@@ -4,7 +4,7 @@ import { Github, ExternalLink, Info, ShieldCheck, Terminal, Layers, Zap, Cpu, Se
 
 const OpenSource = () => {
   return (
-    <section id="open-source" className="py-20 px-4 bg-background bg-grid-pattern relative">
+    <section id="open-source" className="py-20 px-4 bg-transparent relative">
       <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-background/80 pointer-events-none" />
       
       <div className="max-w-5xl mx-auto relative z-10">

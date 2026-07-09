@@ -92,6 +92,16 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: radial-gradient(rgba(99, 102, 241, 0.08) 1.5px, transparent 1.5px);
+    background-size: 24px 24px;
+    z-index: -30;
+    pointer-events: none;
+  }
+
   html {
     scroll-behavior: smooth;
   }
