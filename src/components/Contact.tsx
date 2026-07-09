@@ -59,7 +59,7 @@ const Contact = () => {
                   className="border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   asChild
                 >
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/p-avinash-kumar-0437481b3/" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </Button>
@@ -69,7 +69,7 @@ const Contact = () => {
                   className="border-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   asChild
                 >
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/Avinash-1994" target="_blank" rel="noopener noreferrer">
                     <Github className="h-5 w-5" />
                   </a>
                 </Button>

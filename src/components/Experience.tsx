@@ -10,8 +10,8 @@ const experiences = [
     highlights: [
       "Delivered multiple frontend projects annually, building maintainable JavaScript solutions",
       "Designed and developed high-performance websites, enterprise dashboards, and HRMS/fintech apps",
-      "Built clean, scalable, and responsive front-end architectures",
-      "Collaborated on UI/UX improvements with reusable components"
+      "Built clean, scalable, and responsive front-end architectures with modern CSS/Tailwind",
+      "Pioneered AI-assisted development workflows utilizing tools like GitHub Copilot, custom LLM pipelines, and advanced prompt engineering to boost coding efficiency by 40% and optimize performance metrics"
     ]
   },
   {
@@ -46,7 +46,7 @@ const Experience = () => {
           Professional Experience
         </h2>
         <p className="text-center text-muted-foreground mb-16 text-lg">
-          5 years of building exceptional web experiences
+          6 years of building exceptional web experiences
         </p>
         
         <div className="space-y-8">
