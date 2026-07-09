@@ -48,7 +48,7 @@ const Experience = () => {
         <p className="text-center text-muted-foreground mb-16 text-lg">
           6 years of building exceptional web experiences
         </p>
-        
+
         <div className="space-y-8">
           {experiences.map((exp, index) => (
             <div
@@ -78,7 +78,7 @@ const Experience = () => {
                   <ul className="space-y-3">
                     {exp.highlights.map((highlight, i) => (
                       <li key={i} className="flex gap-3 text-muted-foreground">
-                        <span className="text-primary mt-1">▹</span>
+                        <span className="text-primary">▹</span>
                         <span className="flex-1">{highlight}</span>
                       </li>
                     ))}
