@@ -1,87 +1,88 @@
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
-
 const projects = [
   {
     title: "Zlaata",
-    description: "Trendy women's fashion e-commerce platform with extensive clothing collections, smart product recommendations, and seamless shopping experience",
+    description: "Trendy women's fashion e-commerce platform with extensive clothing collections, smart product recommendations, and seamless shopping experience.",
     url: "https://www.zlaata.com/",
-    category: "E-commerce"
+    category: "E-commerce",
+    status: "Production",
+    tags: ["React", "Next.js", "TailwindCSS"],
+    stamps: ["Seamless Shopping", "Smart Recommendations"]
   },
   {
     title: "DigiTathya",
-    description: "Anti-counterfeiting and supply chain verification platform using QR technology for product authentication, warranty management, and brand protection",
+    description: "Anti-counterfeiting and supply chain verification platform using QR technology for product authentication, warranty management, and brand protection.",
     url: "https://digitathya.com/",
-    category: "Product Security"
+    category: "Product Security",
+    status: "Production",
+    tags: ["Angular", "RxJS", "SCSS"],
+    stamps: ["QR Verification", "Supply Chain Tracking"]
   },
   {
     title: "Zrika",
-    description: "Risk engine management tool for merchant payment transactions, providing fraud detection, transaction monitoring, and risk assessment for secure payment processing",
+    description: "Risk engine management tool for merchant payment transactions, providing fraud detection, transaction monitoring, and risk assessment for secure payment processing.",
     url: "https://www.zrika.com/",
-    category: "Payment Security"
+    category: "Payment Security",
+    status: "Production",
+    tags: ["Angular", "TypeScript", "REST APIs"],
+    stamps: ["Fraud Detection", "Risk Engine"]
   },
   {
     title: "GoshHR",
-    description: "Cloud-based HR software with MyTimesheet for workflow tracking, MyNest for amenities management, and TimeLyze for productivity analytics",
+    description: "Cloud-based HR software with MyTimesheet for workflow tracking, MyNest for amenities management, and TimeLyze for productivity analytics.",
     url: "https://goshhr.com/",
-    category: "HRMS"
+    category: "HRMS",
+    status: "Production",
+    tags: ["React", "Redux", "Material UI"],
+    stamps: ["Workflow Tracking", "Productivity Analytics"]
   }
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-4 bg-muted/30">
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-primary bg-clip-text text-transparent">
-          Featured Projects
-        </h2>
-        <p className="text-center text-muted-foreground mb-16 text-lg">
-          Real-world applications I've built and contributed to
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
-            <div
-              key={project.title}
-              className="animate-scale-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <Card className="group bg-card/50 backdrop-blur-sm border-border hover:border-primary transition-all duration-300 h-full hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-1">
-                <CardHeader>
-                  <div className="flex items-start justify-between gap-4 mb-2">
-                    <div>
-                      <CardTitle className="text-2xl group-hover:text-primary transition-colors">
-                        {project.title}
-                      </CardTitle>
-                      <CardDescription className="text-sm font-medium text-primary/80 mt-1">
-                        {project.category}
-                      </CardDescription>
-                    </div>
-                    <Button
-                      variant="ghost"
-                      size="icon"
-                      className="hover:bg-primary/10 hover:text-primary shrink-0"
-                      asChild
-                    >
-                      <a 
-                        href={project.url} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        aria-label={`Visit ${project.title}`}
-                      >
-                        <ExternalLink className="h-5 w-5" />
-                      </a>
-                    </Button>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {project.description}
-                  </p>
-                </CardHeader>
-              </Card>
+    <section id="projects" className="max-w-[1080px] mx-auto py-[120px] px-[24px]">
+      <div className="eyebrow reveal">04 — Selected work</div>
+      <h2 className="reveal">Products I've built and contributed to</h2>
+      <p className="section-sub reveal">Real-world applications delivered for modern businesses and consumers.</p>
+      
+      <div>
+        {projects.map((project, index) => (
+          <div
+            key={project.title}
+            className={`project-card reveal reveal-delay-${(index % 3) + 1 > 3 ? 3 : (index % 3) + 1}`}
+          >
+            <svg className="project-svg-border" preserveAspectRatio="none">
+              <rect x="1" y="1" width="calc(100% - 2px)" height="calc(100% - 2px)" rx="4"/>
+            </svg>
+            <div className="project-head">
+              <div className="project-title flex items-center gap-3">
+                {project.title}
+                <a 
+                  href={project.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-[var(--teal)] opacity-70 hover:opacity-100 transition-opacity"
+                  aria-label={`Visit ${project.title}`}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </div>
+              <div className="project-status">{project.category} · {project.status}</div>
             </div>
-          ))}
-        </div>
+            <div className="project-desc">
+              {project.description}
+            </div>
+            <div className="stamp-row">
+              {project.stamps.map(stamp => (
+                <span key={stamp} className="stamp">{stamp}</span>
+              ))}
+            </div>
+            <div className="project-tags">
+              {project.tags.map(tag => (
+                <span key={tag} className="tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
